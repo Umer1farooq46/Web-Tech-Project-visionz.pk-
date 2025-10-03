@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classic Aviators - Visionz Optical Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: '#0B3D2E',
+            tealGlow: '#16A085',
+            gold: '#FFD700',
+            lightBg: '#F9FAFB',
+            mutedGray: '#94A3B8',
+            skyBlue: '#E0F2FE',
+            coral: '#FF6B6B',
+            whatsapp: '#25D366',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #menu-toggle:checked + .mobile-menu {
+      transform: translateX(0);
+    }
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .product-card {
+      transition: all 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body class="font-inter bg-lightBg text-emerald antialiased">
+
+  <!-- ===== HEADER ===== -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+      <div class="font-poppins font-bold text-2xl">
+        <a href="index.html">Visionz</a>
+      </div>
+
+      <nav class="hidden md:flex gap-8">
+        <a href="index.html" class="hover:text-tealGlow transition">Home</a>
+        <a href="explore-more.html" class="hover:text-tealGlow transition">Shop</a>
+        <a href="index.html#about" class="hover:text-tealGlow transition">About Us</a>
+        <a href="index.html#contact" class="hover:text-tealGlow transition">Contact Us</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button class="p-2 hover:text-tealGlow transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M18 10a8 8 0 11-16 0 8 8 0 0116 0z" />
+          </svg>
+        </button>
+
+        <details class="relative">
+          <summary class="p-2 cursor-pointer list-none hover:text-tealGlow transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </summary>
+          <div class="absolute right-0 mt-2 w-32 bg-white border rounded shadow-lg">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Login</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sign Up</a>
+          </div>
+        </details>
+
+        <div class="relative p-2 hover:text-tealGlow cursor-pointer transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.1 5.2c-.1.2-.1.4-.1.6 0 .3.2.6.5.8.2.1.4.2.7.2h8c.3 0 .6-.1.8-.3.2-.2.3-.5.2-.8L17 13M16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+          </svg>
+          <span class="absolute -top-1 -right-1 bg-gold text-emerald text-xs rounded-full px-1.5 py-0.5 font-semibold">2</span>
+        </div>
+
+        <div class="md:hidden">
+          <input type="checkbox" id="menu-toggle" class="hidden">
+          <label for="menu-toggle" class="cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+          <div class="mobile-menu fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6 z-50">
+            <label for="menu-toggle" class="absolute top-4 right-4 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </label>
+            <nav class="flex flex-col gap-4 mt-12">
+              <a href="index.html" class="hover:text-tealGlow">Home</a>
+              <a href="explore-more.html" class="hover:text-tealGlow">Shop</a>
+              <a href="index.html#about" class="hover:text-tealGlow">About Us</a>
+              <a href="index.html#contact" class="hover:text-tealGlow">Contact Us</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gold text-emerald text-center font-bold text-sm py-2">
+      🔥 Flat 20% OFF This Week! Free Shipping on Orders Above Rs. 3000
+    </div>
+  </header>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <section class="py-4 px-6 bg-white border-b">
+    <div class="max-w-7xl mx-auto">
+      <nav class="flex items-center gap-2 text-sm text-mutedGray">
+        <a href="index.html" class="hover:text-tealGlow transition">Home</a>
+        <span>/</span>
+        <a href="explore-more.html" class="hover:text-tealGlow transition">Shop</a>
+        <span>/</span>
+        <span class="text-emerald font-medium">Classic Aviators</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT DETAIL SECTION ===== -->
+  <section class="py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <!-- Product Images -->
+        <div>
+          <div class="bg-white rounded-2xl shadow-lg p-8 mb-4">
+            <img src="images/product1.jpg" alt="Classic Aviators" class="w-full h-96 object-cover rounded-xl">
+          </div>
+          <div class="grid grid-cols-4 gap-3">
+            <div class="bg-white rounded-lg shadow p-2 border-2 border-gold cursor-pointer">
+              <img src="images/product1.jpg" alt="View 1" class="w-full h-20 object-cover rounded">
+            </div>
+            <div class="bg-white rounded-lg shadow p-2 border-2 border-transparent hover:border-tealGlow cursor-pointer transition">
+              <img src="images/product1.jpg" alt="View 2" class="w-full h-20 object-cover rounded">
+            </div>
+            <div class="bg-white rounded-lg shadow p-2 border-2 border-transparent hover:border-tealGlow cursor-pointer transition">
+              <img src="images/product1.jpg" alt="View 3" class="w-full h-20 object-cover rounded">
+            </div>
+            <div class="bg-white rounded-lg shadow p-2 border-2 border-transparent hover:border-tealGlow cursor-pointer transition">
+              <img src="images/product1.jpg" alt="View 4" class="w-full h-20 object-cover rounded">
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div>
+          <div class="mb-4">
+            <span class="inline-block px-3 py-1 bg-coral text-white rounded-full text-sm font-semibold">20% OFF</span>
+            <span class="inline-block px-3 py-1 bg-tealGlow text-white rounded-full text-sm font-semibold ml-2">In Stock</span>
+          </div>
+
+          <h1 class="text-3xl md:text-4xl font-poppins font-bold mb-4">Classic Aviators</h1>
+          
+          <div class="flex items-center gap-2 mb-6">
+            <div class="flex text-gold">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            </div>
+            <span class="text-mutedGray">(128 Reviews)</span>
+          </div>
+
+          <div class="flex items-center gap-4 mb-6">
+            <span class="text-4xl font-bold text-emerald">Rs. 2,800</span>
+            <span class="text-2xl text-mutedGray line-through">Rs. 3,500</span>
+          </div>
+
+          <p class="text-mutedGray text-lg mb-8">
+            Timeless aviator design with premium polarized lenses. Lightweight alloy frame provides all-day comfort with UV400 protection. Perfect for driving, outdoor activities, and everyday style.
+          </p>
+
+          <!-- Features -->
+          <div class="mb-8">
+            <h3 class="font-semibold text-lg mb-4">Key Features:</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-tealGlow mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span class="text-mutedGray">100% UV400 Protection</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-tealGlow mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span class="text-mutedGray">Polarized Lenses - Reduces Glare</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-tealGlow mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span class="text-mutedGray">Lightweight Metal Alloy Frame</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-tealGlow mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span class="text-mutedGray">Scratch-Resistant Coating</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-tealGlow mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span class="text-mutedGray">Comes with Protective Case</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Color Options -->
+          <div class="mb-8">
+            <h3 class="font-semibold text-lg mb-3">Choose Color:</h3>
+            <div class="flex gap-3">
+              <button class="w-12 h-12 rounded-full border-4 border-gold bg-gray-800"></button>
+              <button class="w-12 h-12 rounded-full border-2 border-gray-300 bg-blue-900 hover:border-tealGlow transition"></button>
+              <button class="w-12 h-12 rounded-full border-2 border-gray-300 bg-amber-700 hover:border-tealGlow transition"></button>
+            </div>
+          </div>
+
+          <!-- Quantity -->
+          <div class="mb-8">
+            <h3 class="font-semibold text-lg mb-3">Quantity:</h3>
+            <div class="flex items-center gap-4">
+              <button class="w-10 h-10 border-2 border-emerald rounded-lg hover:bg-emerald hover:text-white transition font-bold">-</button>
+              <span class="text-xl font-semibold px-6">1</span>
+              <button class="w-10 h-10 border-2 border-emerald rounded-lg hover:bg-emerald hover:text-white transition font-bold">+</button>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 mb-8">
+            <button class="flex-1 px-8 py-4 bg-gold text-emerald rounded-xl font-semibold text-lg hover:scale-105 transition shadow-lg">
+              Add to Cart
+            </button>
+            <button class="px-8 py-4 border-2 border-emerald text-emerald rounded-xl font-semibold text-lg hover:bg-emerald hover:text-white hover:scale-105 transition">
+              Buy Now
+            </button>
+          </div>
+
+          <!-- Additional Info -->
+          <div class="bg-gradient-to-r from-emerald/10 to-tealGlow/10 rounded-xl p-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex items-center gap-3">
+                <svg class="w-6 h-6 text-tealGlow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+                <span class="text-sm">Free Shipping</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-6 h-6 text-tealGlow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span class="text-sm">1 Year Warranty</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-6 h-6 text-tealGlow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                <span class="text-sm">30-Day Returns</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-6 h-6 text-tealGlow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                <span class="text-sm">Secure Payment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RELATED PRODUCTS ===== -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-poppins font-bold mb-10 text-center">You May Also Like</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Related Product 1 -->
+        <div class="product-card bg-white rounded-xl shadow overflow-hidden">
+          <div class="relative">
+            <img src="images/product2.jpg" alt="Modern Rectangle Frames" class="w-full h-56 object-cover">
+            <div class="absolute top-3 right-3">
+              <button class="p-2 bg-white/90 rounded-full hover:bg-white transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-2">Modern Rectangle Frames</h3>
+            <p class="text-mutedGray text-sm mb-3">Prescription Ready</p>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xl font-bold text-emerald">Rs. 5,200</span>
+            </div>
+            <a href="product-detail-2.html" class="block w-full px-4 py-2 bg-gold text-emerald rounded-lg font-semibold hover:scale-105 transition text-center">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Related Product 2 -->
+        <div class="product-card bg-white rounded-xl shadow overflow-hidden">
+          <div class="relative">
+            <img src="images/product5.jpg" alt="Sports Sunglasses" class="w-full h-56 object-cover">
+            <div class="absolute top-3 left-3">
+              <span class="bg-coral text-white px-2 py-1 rounded-full text-xs font-semibold">15% OFF</span>
+            </div>
+            <div class="absolute top-3 right-3">
+              <button class="p-2 bg-white/90 rounded-full hover:bg-white transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-2">Sports Sunglasses</h3>
+            <p class="text-mutedGray text-sm mb-3">Polarized Lenses</p>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2">
+                <span class="text-xl font-bold text-emerald">Rs. 3,825</span>
+                <span class="text-mutedGray line-through text-sm">Rs. 4,500</span>
+              </div>
+            </div>
+            <a href="product-detail-3.html" class="block w-full px-4 py-2 bg-gold text-emerald rounded-lg font-semibold hover:scale-105 transition text-center">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Related Product 3 -->
+        <div class="product-card bg-white rounded-xl shadow overflow-hidden">
+          <div class="relative">
+            <img src="images/product4.jpg" alt="Round Vintage Frames" class="w-full h-56 object-cover">
+            <div class="absolute top-3 right-3">
+              <button class="p-2 bg-white/90 rounded-full hover:bg-white transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-2">Round Vintage Frames</h3>
+            <p class="text-mutedGray text-sm mb-3">Retro Style</p>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xl font-bold text-emerald">Rs. 4,500</span>
+            </div>
+            <a href="product-detail-4.html" class="block w-full px-4 py-2 bg-gold text-emerald rounded-lg font-semibold hover:scale-105 transition text-center">
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <!-- Related Product 4 -->
+        <div class="product-card bg-white rounded-xl shadow overflow-hidden">
+          <div class="relative">
+            <img src="images/product7.jpg" alt="Designer Sunglasses" class="w-full h-56 object-cover">
+            <div class="absolute top-3 left-3">
+              <span class="bg-gold text-emerald px-2 py-1 rounded-full text-xs font
