@@ -29,6 +29,7 @@
     }
   </script>
   <style>
+    /* Scrolling promotional text animation */
     .scrolling-text {
       display: inline-block;
       padding-left: 100%;
@@ -39,7 +40,7 @@
       100% { transform: translateX(-100%); }
     }
 
-    /* Smooth scrolling for in-page links */
+    /* Smooth scrolling for in-page anchor links */
     html {
       scroll-behavior: smooth;
     }
@@ -58,12 +59,12 @@
       100% { transform: translateX(-50%); }
     }
 
-    /* Button hover scale effect (shared style) */
+    /* Button hover scale effect - used throughout the site */
     .btn-hover:hover {
       transform: scale(1.05);
     }
 
-    /* Mobile menu toggle (shared style) */
+    /* Mobile menu toggle functionality */
     #menu-toggle:checked + .mobile-menu {
       transform: translateX(0);
     }
@@ -75,12 +76,18 @@
 </head>
 <body class="font-inter bg-lightBg text-emerald antialiased">
 
+  <!-- ========================================
+       HEADER SECTION - Sticky Navigation
+       ======================================== -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+      
+      <!-- Logo -->
       <div class="font-poppins font-bold text-2xl">
         <a href="index.html">Visionz</a>
       </div>
 
+      <!-- Desktop Navigation Menu -->
       <nav class="hidden md:flex gap-8">
         <a href="#home" class="hover:text-tealGlow transition">Home</a>
         <a href="explore-more.html" class="hover:text-tealGlow transition">Shop</a>
@@ -88,13 +95,17 @@
         <a href="#contact" class="hover:text-tealGlow transition">Contact Us</a>
       </nav>
 
+      <!-- Header Action Icons -->
       <div class="flex items-center gap-4">
+        
+        <!-- Search Icon Button -->
         <button class="p-2 hover:text-tealGlow transition">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M18 10a8 8 0 11-16 0 8 8 0 0116 0z" />
           </svg>
         </button>
 
+        <!-- User Account Dropdown -->
         <details class="relative">
           <summary class="p-2 cursor-pointer list-none hover:text-tealGlow transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -107,13 +118,16 @@
           </div>
         </details>
 
-        <div class="relative p-2 hover:text-tealGlow cursor-pointer transition">
+        <!-- Shopping Cart Icon - Links to Checkout Page -->
+        <a href="checkout.html" class="relative inline-block p-2 hover:text-tealGlow transition">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.1 5.2c-.1.2-.1.4-.1.6 0 .3.2.6.5.8.2.1.4.2.7.2h8c.3 0 .6-.1.8-.3.2-.2.3-.5.2-.8L17 13M16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
           </svg>
+          <!-- Cart Item Count Badge -->
           <span class="absolute -top-1 -right-1 bg-gold text-emerald text-xs rounded-full px-1.5 py-0.5 font-semibold">2</span>
-        </div>
+        </a>
 
+        <!-- Mobile Menu Toggle -->
         <div class="md:hidden">
           <input type="checkbox" id="menu-toggle" class="hidden">
           <label for="menu-toggle" class="cursor-pointer">
@@ -121,6 +135,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </label>
+          <!-- Mobile Menu Slide-in Panel -->
           <div class="mobile-menu fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6 z-50">
             <label for="menu-toggle" class="absolute top-4 right-4 cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -138,8 +153,7 @@
       </div>
     </div>
 
-
-
+    <!-- Promotional Banner with Scrolling Text -->
     <div class="bg-gold text-emerald overflow-hidden whitespace-nowrap py-2 text-sm font-medium">
       <p class="scrolling-text">
       🔥 Flat 20% OFF This Week! Free Shipping on Orders Above Rs. 3000
@@ -147,20 +161,27 @@
     </div>
   </header>
 
+  <!-- ========================================
+       HERO SECTION - Sliding Image Background
+       ======================================== -->
   <section id="home" class="relative h-[80vh] overflow-hidden">
+    <!-- Background Image Slider -->
     <div class="absolute inset-0 overflow-hidden">
       <div class="hero-slider h-full">
         <div class="w-1/6 bg-cover bg-center bg-emerald flex-shrink-0" style="background-image:url('images/hero1.jpg');"></div>
         <div class="w-1/6 bg-cover bg-center bg-emerald flex-shrink-0" style="background-image:url('images/hero2.jpg');"></div>
         <div class="w-1/6 bg-cover bg-center bg-emerald flex-shrink-0" style="background-image:url('images/heroo3.jpg');"></div>
+        <!-- Duplicate images for seamless loop -->
         <div class="w-1/6 bg-cover bg-center bg-emerald flex-shrink-0" style="background-image:url('images/hero1.jpg');"></div>
         <div class="w-1/6 bg-cover bg-center bg-emerald flex-shrink-0" style="background-image:url('images/hero2.jpg');"></div>
         <div class="w-1/6 bg-cover bg-center bg-emerald flex-shrink-0" style="background-image:url('images/hero3.jpg');"></div>
       </div>
     </div>
 
+    <!-- Dark Overlay for Text Readability -->
     <div class="absolute inset-0 bg-black/40"></div>
 
+    <!-- Hero Content -->
     <div class="absolute inset-0 flex items-center px-6 lg:px-16">
       <div class="max-w-xl text-white">
         <p class="uppercase text-sm tracking-wider mb-2">Premium Eyewear for Everyone</p>
@@ -170,6 +191,7 @@
         <p class="mb-6 text-lg">
           Premium and affordable eyewear — from fashion sunglasses to precision prescription lenses.
         </p>
+        <!-- Call-to-Action Buttons -->
         <div class="flex gap-4">
           <a href="explore-more.html" class="px-6 py-3 bg-gold text-emerald font-semibold rounded transform transition btn-hover">Shop Now</a>
           <a href="#categories" class="px-6 py-3 border border-white text-white rounded transform transition btn-hover">Explore Collections</a>
@@ -178,11 +200,17 @@
     </div>
   </section>
 
+  <!-- ========================================
+       CATEGORIES SECTION - Shop by Category
+       ======================================== -->
   <section id="categories" class="py-16 px-6">
     <div class="max-w-7xl mx-auto text-center mb-10">
       <h2 class="text-3xl font-poppins font-bold">Shop by Category</h2>
     </div>
+    <!-- Category Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      
+      <!-- Sunglasses Category -->
       <div class="group bg-white rounded shadow overflow-hidden hover:shadow-xl transition">
         <img src="images/category-sunglasses.jpg" alt="Sunglasses" class="w-full h-56 object-cover group-hover:scale-105 transition">
         <div class="p-4">
@@ -190,6 +218,8 @@
           <a href="explore-more.html" class="text-tealGlow mt-2 inline-block">Shop Now →</a>
         </div>
       </div>
+
+      <!-- Prescription Glasses Category -->
       <div class="group bg-white rounded shadow overflow-hidden hover:shadow-xl transition">
         <img src="images/category-prescription.jpg" alt="Prescription Glasses" class="w-full h-56 object-cover group-hover:scale-105 transition">
         <div class="p-4">
@@ -197,6 +227,8 @@
           <a href="explore-more.html" class="text-tealGlow mt-2 inline-block">Shop Now →</a>
         </div>
       </div>
+
+      <!-- Contact Lenses Category -->
       <div class="group bg-white rounded shadow overflow-hidden hover:shadow-xl transition">
         <img src="images/category-lenses.jpg" alt="Contact Lenses" class="w-full h-56 object-cover group-hover:scale-105 transition">
         <div class="p-4">
@@ -207,80 +239,107 @@
     </div>
   </section>
 
+  <!-- ========================================
+       PRODUCTS SECTION - Best-Selling Products
+       ======================================== -->
   <section id="shop" class="py-16 px-6 bg-lightBg">
     <div class="max-w-7xl mx-auto mb-10 text-center">
       <h2 class="text-3xl font-poppins font-bold">Best-Selling Products</h2>
     </div>
+    <!-- Product Cards Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      
+      <!-- Product 1 -->
       <div class="bg-white rounded shadow hover:shadow-lg transition p-4 flex flex-col">
         <img src="images/product1.jpg" alt="Product 1" class="h-48 w-full object-cover rounded">
         <h3 class="mt-4 font-semibold">Classic Aviators</h3>
         <p class="text-mutedGray text-sm">Rs. 3,500</p>
         <a href="explore-more.html" class="mt-auto px-4 py-2 bg-gold text-emerald rounded btn-hover transition text-center">Add to Cart</a>
       </div>
+
+      <!-- Product 2 -->
       <div class="bg-white rounded shadow hover:shadow-lg transition p-4 flex flex-col">
         <img src="images/product2.jpg" alt="Product 2" class="h-48 w-full object-cover rounded">
         <h3 class="mt-4 font-semibold">Modern Rectangle Frames</h3>
         <p class="text-mutedGray text-sm">Rs. 5,200</p>
         <a href="explore-more.html" class="mt-auto px-4 py-2 bg-gold text-emerald rounded btn-hover transition text-center">Add to Cart</a>
       </div>
+
+      <!-- Product 3 -->
       <div class="bg-white rounded shadow hover:shadow-lg transition p-4 flex flex-col">
         <img src="images/product3.jpg" alt="Product 3" class="h-48 w-full object-cover rounded">
         <h3 class="mt-4 font-semibold">Blue-Light Protection</h3>
         <p class="text-mutedGray text-sm">Rs. 2,800</p>
         <a href="explore-more.html" class="mt-auto px-4 py-2 bg-gold text-emerald rounded btn-hover transition text-center">Add to Cart</a>
       </div>
-      </div>
+    </div>
   </section>
 
+  <!-- ========================================
+       CALL TO ACTION - Explore Full Collection
+       ======================================== -->
   <section class="bg-emerald text-white py-16 px-6 text-center">
     <h2 class="text-3xl font-poppins font-bold mb-6">Explore Our Full Collection of Premium Eyewear</h2>
     <a href="explore-more.html" class="px-6 py-3 bg-gold text-emerald rounded font-semibold btn-hover transition">Explore Now</a>
   </section>
 
+  <!-- ========================================
+       FEATURES SECTION - Why Choose Visionz
+       ======================================== -->
   <section class="bg-gradient-to-r from-emerald to-tealGlow py-16 px-6">
-  <div class="max-w-7xl mx-auto text-center mb-12">
-    <h2 class="text-4xl font-poppins font-bold text-white">Why Choose Visionz</h2>
-    <p class="text-white/80 mt-3 text-lg">We are committed to providing you with stylish, affordable, and premium-quality eyewear.</p>
-  </div>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-2xl transition">
-      <h3 class="font-semibold text-xl text-emerald">Premium Quality</h3>
-      <p class="text-mutedGray mt-3">
-        Every frame and lens is carefully crafted with top-tier materials to ensure clarity, comfort, and durability.
-      </p>
+    <div class="max-w-7xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-poppins font-bold text-white">Why Choose Visionz</h2>
+      <p class="text-white/80 mt-3 text-lg">We are committed to providing you with stylish, affordable, and premium-quality eyewear.</p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-2xl transition">
-      <h3 class="font-semibold text-xl text-emerald">Affordable Prices</h3>
-      <p class="text-mutedGray mt-3">
-        Get modern, stylish eyewear that fits your budget without compromising on quality or design.
-      </p>
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      
+      <!-- Feature 1 - Premium Quality -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-2xl transition">
+        <h3 class="font-semibold text-xl text-emerald">Premium Quality</h3>
+        <p class="text-mutedGray mt-3">
+          Every frame and lens is carefully crafted with top-tier materials to ensure clarity, comfort, and durability.
+        </p>
+      </div>
+
+      <!-- Feature 2 - Affordable Prices -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-2xl transition">
+        <h3 class="font-semibold text-xl text-emerald">Affordable Prices</h3>
+        <p class="text-mutedGray mt-3">
+          Get modern, stylish eyewear that fits your budget without compromising on quality or design.
+        </p>
+      </div>
+
+      <!-- Feature 3 - Free Shipping -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-2xl transition">
+        <h3 class="font-semibold text-xl text-emerald">Fast & Free Shipping</h3>
+        <p class="text-mutedGray mt-3">
+          Enjoy free delivery nationwide on all orders above Rs. 3000 — straight to your doorstep.
+        </p>
+      </div>
+
+      <!-- Feature 4 - 24/7 Support -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-2xl transition">
+        <h3 class="font-semibold text-xl text-emerald">24/7 Support</h3>
+        <p class="text-mutedGray mt-3">
+          Our friendly team is always ready to assist you with any questions or style recommendations.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-2xl transition">
-      <h3 class="font-semibold text-xl text-emerald">Fast & Free Shipping</h3>
-      <p class="text-mutedGray mt-3">
-        Enjoy free delivery nationwide on all orders above Rs. 3000 — straight to your doorstep.
-      </p>
-    </div>
-
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-2xl transition">
-      <h3 class="font-semibold text-xl text-emerald">24/7 Support</h3>
-      <p class="text-mutedGray mt-3">
-        Our friendly team is always ready to assist you with any questions or style recommendations.
-      </p>
-    </div>
-  </div>
-</section>
-
-
+  <!-- ========================================
+       TESTIMONIALS SECTION - Customer Reviews
+       ======================================== -->
   <section class="bg-lightBg py-16 px-6">
     <div class="max-w-7xl mx-auto text-center mb-10">
       <h2 class="text-3xl font-poppins font-bold">What Our Customers Say</h2>
     </div>
+    <!-- Testimonial Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      
+      <!-- Testimonial 1 -->
       <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
         <p class="mb-4">"Amazing quality and fast delivery! Visionz is my go-to for all eyewear."</p>
         <div class="flex items-center gap-4">
@@ -291,6 +350,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Testimonial 2 -->
       <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
         <p class="mb-4">"Stylish frames at affordable prices. Highly recommended!"</p>
         <div class="flex items-center gap-4">
@@ -301,6 +362,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Testimonial 3 -->
       <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
         <p class="mb-4">"Excellent customer support and top-notch quality."</p>
         <div class="flex items-center gap-4">
@@ -314,10 +377,14 @@
     </div>
   </section>
 
+  <!-- ========================================
+       NEWSLETTER SECTION - Email Subscription
+       ======================================== -->
   <section class="py-16 px-6">
     <div class="max-w-4xl mx-auto bg-white p-8 rounded shadow text-center">
       <h2 class="text-2xl font-poppins font-bold mb-2">Join Our Newsletter</h2>
       <p class="text-mutedGray mb-6">Be the first to know about discounts and new arrivals.</p>
+      <!-- Newsletter Form -->
       <form class="flex flex-col sm:flex-row gap-4 justify-center">
         <input type="email" placeholder="Enter your email" class="border rounded px-4 py-2 w-full sm:w-72">
         <button class="px-6 py-2 bg-gold text-emerald rounded btn-hover transition">Subscribe</button>
@@ -325,18 +392,28 @@
     </div>
   </section>
 
-  <a href="https://wa.me/923054323059" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-whatsapp rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition">
+  <!-- ========================================
+       FLOATING WHATSAPP BUTTON - Fixed Position
+       ======================================== -->
+  <a href="https://wa.me/923054323059" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-whatsapp rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition z-40">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.89 3.488"/>
     </svg>
   </a>
 
+  <!-- ========================================
+       FOOTER SECTION - Site Links & Information
+       ======================================== -->
   <footer class="bg-emerald text-white py-12 px-6">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <!-- Footer Column 1 - Brand Info -->
       <div>
         <h3 class="font-poppins font-bold text-xl">Visionz</h3>
         <p class="text-sm mt-2">Stylish, premium-quality optical products at affordable prices.</p>
       </div>
+
+      <!-- Footer Column 2 - Quick Links -->
       <div>
         <h4 class="font-semibold mb-3">Quick Links</h4>
         <ul class="space-y-2">
@@ -346,37 +423,19 @@
           <li><a href="#contact" class="hover:text-gold">Contact Us</a></li>
         </ul>
       </div>
+
+      <!-- Footer Column 3 - Contact Information -->
       <div>
         <h4 class="font-semibold mb-3">Contact Info</h4>
         <p class="text-sm">Phone: +92 305 4323059</p>
         <p class="text-sm">Email: support@visionz.com</p>
       </div>
+
+      <!-- Footer Column 4 - Social Media Links -->
       <div>
         <h4 class="font-semibold mb-3">Our Social Profiles</h4>
         <div class="flex gap-3">
+          <!-- Instagram Link -->
           <a href="https://www.instagram.com/visionz.pk1?igsh=ZWdvNXl4ajJwbDB0" target="_blank" class="hover:text-gold transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </a>
-          <a href="https://facebook.com/visionz" target="_blank" class="hover:text-gold transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </a>
-        </div>
-        <a href="https://wa.me/923054323059" target="_blank" class="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-whatsapp rounded btn-hover transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.89 3.488"/>
-          </svg>
-          Chat on WhatsApp
-        </a>
-      </div>
-    </div>
-    <div class="mt-8 text-center text-sm text-gray-200">
-      © 2025 Visionz. All Rights Reserved.
-    </div>
-  </footer>
-
-</body>
-</html>
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-
